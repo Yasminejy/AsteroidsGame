@@ -2,6 +2,7 @@ Spaceship bob = new Spaceship();
   Star[] nightSky = new Star [200];
   ArrayList <Asteroid> bobby;
 
+
   public void setup()
   {
     size (800, 800);
@@ -29,8 +30,7 @@ Spaceship bob = new Spaceship();
       bobby.get(i).show();
       bobby.get(i).move();
     }
-    
- 
+   
     bob.show();
     bob.move();
    
@@ -51,5 +51,5 @@ Spaceship bob = new Spaceship();
       if (key == 's'|| key == 'S') {
         bob.accelerate (-0.5);
       }
-    }
+    }   
   }
