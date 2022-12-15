@@ -1,5 +1,3 @@
-class Star //note that this class does NOT extend Floater
-{
   class Star
 {
   private int myX, myY;
@@ -14,5 +12,4 @@ class Star //note that this class does NOT extend Floater
     fill((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
     ellipse (myX, myY, 3, 3);
   }
-}
 }
