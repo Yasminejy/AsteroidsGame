@@ -52,4 +52,5 @@ Spaceship bob = new Spaceship();
         bob.accelerate (-0.5);
       }
     }
+    }
   }
