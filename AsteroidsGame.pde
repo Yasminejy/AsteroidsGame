@@ -11,7 +11,7 @@ public void setup()
     nightSky [i] = new Star();
   }
   bobby = new ArrayList <Asteroid>();
-  for (int i=0; i<5; i++)
+  for (int i=0; i<15; i++)
   {
     bobby.add(new Asteroid());
   }
@@ -23,7 +23,17 @@ public void draw()
   {
     nightSky [i].show();
   }
-
+ for (int r =0; r <shots.size(); r++)
+ {
+    shots.get(r).move();
+    shots.get(r).show();
+  }
+for (int y =0; y < bobby.size(); y++)
+  {
+    bobby.get(y).show();
+    bobby.get(y).move();
+  }
+     
   for (int i = 0; i< bobby.size(); i++)
   {
     bobby.get(i).show();
@@ -32,22 +42,24 @@ public void draw()
     if (d<20)
       bobby.remove(i);
 
-    for (int i =0; i<shots.size(); i++)
+    for (int k =0; k<shots.size(); k++)
     {
       for (int j=0; j< bobby.size(); j++)
       {
-        float e = dist ((float)shots.get(i).getX(), (float)shots.get(i).getY, (float)bobby.get(j).getX(), (float)bobby.get(j).getY());
-        if (e<15)
+        float e = dist ((float)shots.get(i).getX(), (float)shots.get(i).getY(), (float)bobby.get(j).getX(), (float)bobby.get(j).getY());
+  if (e<800)
         {
-          shots.remove(i);
+          shots.remove(k);
           bobby.remove(j);
           break;
-        }
+        } 
       }
-      bob.show();
-      bob.move();
     }
     }
+    bob.show();
+    bob.move();
+}
+   
     public void keyPressed()
     {
       if (keyPressed)
